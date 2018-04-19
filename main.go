@@ -16,13 +16,16 @@ func main() {
 	router.StaticFile("/favicon.ico", "./resources/favicon.ico")
 	router.LoadHTMLGlob("templates/*")
 
-	router.GET("/", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "from api success",
+	api := router.Group("/api")
+	{
+		api.GET("/test", func(c *gin.Context) {
+			c.JSON(http.StatusOK, gin.H{
+				"message": "from api success",
+			})
 		})
-	})
+	}
 
-	router.GET("/index", func(c *gin.Context) {
+	router.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.tmpl", gin.H{
 			"title": "Main website",
 		})
