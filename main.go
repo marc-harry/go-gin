@@ -31,5 +31,12 @@ func main() {
 		})
 	})
 
+	router.NoRoute(func(c *gin.Context) {
+		c.Redirect(http.StatusPermanentRedirect, "/")
+		// c.HTML(http.StatusOK, "index.tmpl", gin.H{
+		// 	"title": "Not found",
+		// })
+	})
+
 	router.Run()
 }
