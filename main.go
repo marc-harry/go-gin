@@ -1,15 +1,12 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	fmt.Println("Hello, world!")
-
 	router := gin.Default()
 
 	router.Static("/assets", "./assets")
@@ -23,6 +20,13 @@ func main() {
 				"message": "from api success",
 			})
 		})
+
+		productRoute := api.Group("/product")
+		{
+			productRoute.POST("/create", ProductCreate)
+			productRoute.GET("/all", ProductGet)
+			productRoute.DELETE("/:id", ProductDelete)
+		}
 	}
 
 	router.GET("/", func(c *gin.Context) {
@@ -33,9 +37,6 @@ func main() {
 
 	router.NoRoute(func(c *gin.Context) {
 		c.Redirect(http.StatusPermanentRedirect, "/")
-		// c.HTML(http.StatusOK, "index.tmpl", gin.H{
-		// 	"title": "Not found",
-		// })
 	})
 
 	router.Run()
