@@ -8,8 +8,14 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// ProductCreate create a product
-func ProductCreate(c *gin.Context) {
+// ProductControllerType interface
+type ProductControllerType struct{}
+
+// ProductController instance
+var ProductController = ProductControllerType{}
+
+// Create a new product
+func (ctrl *ProductControllerType) Create(c *gin.Context) {
 	var product Product
 	if err := c.ShouldBind(&product); err == nil {
 		db, dbErr := GetDb()
@@ -25,8 +31,8 @@ func ProductCreate(c *gin.Context) {
 	}
 }
 
-// ProductGet all products
-func ProductGet(c *gin.Context) {
+// Get all products
+func (ctrl *ProductControllerType) Get(c *gin.Context) {
 	if db, err := GetDb(); err == nil {
 		defer db.Close()
 		var products []Product
@@ -37,8 +43,8 @@ func ProductGet(c *gin.Context) {
 	}
 }
 
-// ProductDelete a product by id
-func ProductDelete(c *gin.Context) {
+// Delete a product by id
+func (ctrl *ProductControllerType) Delete(c *gin.Context) {
 	id, idErr := strconv.Atoi(c.Param("id"))
 	if idErr != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"status": idErr.Error()})

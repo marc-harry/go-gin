@@ -23,9 +23,9 @@ func main() {
 
 		productRoute := api.Group("/product")
 		{
-			productRoute.POST("/create", ProductCreate)
-			productRoute.GET("/all", ProductGet)
-			productRoute.DELETE("/:id", ProductDelete)
+			productRoute.POST("/create", ProductController.Create)
+			productRoute.GET("/all", ProductController.Get)
+			productRoute.DELETE("/:id", ProductController.Delete)
 		}
 	}
 
