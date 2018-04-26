@@ -1,0 +1,127 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "tWpKXg2oc//s+LLt5//TMa/7BoE=",
+			"path": "github.com/denisenkom/go-mssqldb",
+			"revision": "e32faac87a2220f9342289f2c3b567d1424b8ec5",
+			"revisionTime": "2018-04-16T13:29:13Z"
+		},
+		{
+			"checksumSHA1": "4y7Hv8IPGF177L3VM0LKSqGLfAc=",
+			"path": "github.com/denisenkom/go-mssqldb/internal/cp",
+			"revision": "e32faac87a2220f9342289f2c3b567d1424b8ec5",
+			"revisionTime": "2018-04-16T13:29:13Z"
+		},
+		{
+			"checksumSHA1": "BhMowD2DIKSd9qq8Pzh7Y3mh2/w=",
+			"path": "github.com/gin-contrib/sse",
+			"revision": "22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae",
+			"revisionTime": "2017-01-09T09:34:21Z"
+		},
+		{
+			"checksumSHA1": "DGQTHudiXDLWpvwPKUQbwdgDghY=",
+			"path": "github.com/gin-gonic/gin",
+			"revision": "3455d7f38877a931d0b97bc7c800e6963351ed2f",
+			"revisionTime": "2018-04-19T04:00:22Z"
+		},
+		{
+			"checksumSHA1": "cfdYu0zz0uSm56xBwCwYTUlBWU4=",
+			"path": "github.com/gin-gonic/gin/binding",
+			"revision": "3455d7f38877a931d0b97bc7c800e6963351ed2f",
+			"revisionTime": "2018-04-19T04:00:22Z"
+		},
+		{
+			"checksumSHA1": "ZrBlc4nW5joRSLLRThHlxU+bWtg=",
+			"path": "github.com/gin-gonic/gin/json",
+			"revision": "3455d7f38877a931d0b97bc7c800e6963351ed2f",
+			"revisionTime": "2018-04-19T04:00:22Z"
+		},
+		{
+			"checksumSHA1": "s4/K+U7H8lKxLAsq2cXDpCUiCv4=",
+			"path": "github.com/gin-gonic/gin/render",
+			"revision": "3455d7f38877a931d0b97bc7c800e6963351ed2f",
+			"revisionTime": "2018-04-19T04:00:22Z"
+		},
+		{
+			"checksumSHA1": "du6NkYFlK2UnPki8fQIs7NXrkIE=",
+			"path": "github.com/golang/protobuf/proto",
+			"revision": "e09c5db296004fbe3f74490e84dcd62c3c5ddb1b",
+			"revisionTime": "2018-03-28T16:31:53Z"
+		},
+		{
+			"checksumSHA1": "9wLSnuPuGJbOLUCBEJYEvKmDWVk=",
+			"path": "github.com/jinzhu/gorm",
+			"revision": "6842b49a1ad0feb6b93be830fe63a682cf853ada",
+			"revisionTime": "2018-04-16T14:20:02Z"
+		},
+		{
+			"checksumSHA1": "v8K6Qpj9/+0Gas35DvRIxztqLxk=",
+			"path": "github.com/jinzhu/gorm/dialects/mssql",
+			"revision": "6842b49a1ad0feb6b93be830fe63a682cf853ada",
+			"revisionTime": "2018-04-16T14:20:02Z"
+		},
+		{
+			"checksumSHA1": "mfb/EusMwfajCPq0lwLWM/pvqI4=",
+			"path": "github.com/jinzhu/inflection",
+			"revision": "04140366298a54a039076d798123ffa108fff46c",
+			"revisionTime": "2018-03-08T03:36:59Z"
+		},
+		{
+			"checksumSHA1": "kum8izZy1+pVfDiApW5hT2HoH1w=",
+			"path": "github.com/mattn/go-isatty",
+			"revision": "6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c",
+			"revisionTime": "2017-11-07T05:05:31Z"
+		},
+		{
+			"checksumSHA1": "L9c0xxii5adAmknT4a5C7z1Pwpk=",
+			"path": "github.com/sirupsen/logrus",
+			"revision": "778f2e774c725116edbc3d039dc0dfc1cc62aae8",
+			"revisionTime": "2018-03-29T22:59:52Z"
+		},
+		{
+			"checksumSHA1": "fboFf9h980OU/TqoU4NZZjYsfy8=",
+			"path": "github.com/ugorji/go/codec",
+			"revision": "f3cacc17c85ecb7f1b6a9e373ee85d1480919868",
+			"revisionTime": "2018-04-07T10:30:00Z"
+		},
+		{
+			"checksumSHA1": "MCeXr2RNeiG1XG6V+er1OR0qyeo=",
+			"path": "golang.org/x/crypto/md4",
+			"revision": "719079de17cdc7d84bb2cd40301fc88f280eb809",
+			"revisionTime": "2018-04-26T05:42:46Z"
+		},
+		{
+			"checksumSHA1": "BGm8lKZmvJbf/YOJLeL1rw2WVjA=",
+			"path": "golang.org/x/crypto/ssh/terminal",
+			"revision": "719079de17cdc7d84bb2cd40301fc88f280eb809",
+			"revisionTime": "2018-04-26T05:42:46Z"
+		},
+		{
+			"checksumSHA1": "s59jLWNdJAbFEzpOSlNz8XN5FqU=",
+			"path": "golang.org/x/sys/unix",
+			"revision": "bb9c189858d91f42db229b04d45a4c3d23a7662a",
+			"revisionTime": "2018-04-25T19:23:51Z"
+		},
+		{
+			"checksumSHA1": "Dfz4tGItokMvHZENCsBmPPB8FGQ=",
+			"path": "golang.org/x/sys/windows",
+			"revision": "bb9c189858d91f42db229b04d45a4c3d23a7662a",
+			"revisionTime": "2018-04-25T19:23:51Z"
+		},
+		{
+			"checksumSHA1": "q190bL03wQok3wVwYmMub2XhOiU=",
+			"path": "gopkg.in/go-playground/validator.v8",
+			"revision": "5f1438d3fca68893a817e4a66806cea46a9e4ebf",
+			"revisionTime": "2017-07-30T05:02:35Z"
+		},
+		{
+			"checksumSHA1": "d3jYBfW+YmOxsa5o8m6XyywVbIo=",
+			"path": "gopkg.in/yaml.v2",
+			"revision": "5420a8b6744d3b0345ab293f6fcba19c978f1183",
+			"revisionTime": "2018-03-28T19:50:20Z"
+		}
+	],
+	"rootPath": "github.com/marc-harry/go-gin"
+}

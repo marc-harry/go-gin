@@ -6,6 +6,7 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
+	log "github.com/sirupsen/logrus"
 )
 
 // ProductControllerType interface
@@ -33,6 +34,7 @@ func (ctrl *ProductControllerType) Create(c *gin.Context) {
 
 // Get all products
 func (ctrl *ProductControllerType) Get(c *gin.Context) {
+	log.Info("Get Products Called")
 	if db, err := GetDb(); err == nil {
 		defer db.Close()
 		var products []Product
