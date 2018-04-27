@@ -6,6 +6,7 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
+	"github.com/gin-gonic/gin/binding"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -18,7 +19,7 @@ var ProductController = ProductControllerType{}
 // Create a new product
 func (ctrl *ProductControllerType) Create(c *gin.Context) {
 	var product Product
-	if err := c.ShouldBind(&product); err == nil {
+	if err := ctrl.shouldBind(c, &product); err == nil {
 		db, dbErr := GetDb()
 		defer db.Close()
 		if dbErr == nil {
@@ -64,4 +65,8 @@ func (ctrl *ProductControllerType) Delete(c *gin.Context) {
 	} else {
 		c.JSON(http.StatusInternalServerError, gin.H{"status": err.Error()})
 	}
+}
+
+func (ctrl *ProductControllerType) shouldBind(c *gin.Context, obj interface{}) error {
+	return c.ShouldBindWith(obj, binding.Default(c.Request.Method, c.ContentType()))
 }
